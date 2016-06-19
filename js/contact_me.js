@@ -19,7 +19,7 @@ $(function() {
             }
             $.ajax({
                 url: "https://formspree.io/udi.secure@email.com",
-                method: "POST",
+                type: "POST",
                 data: {
                     name: name,
                     _replyto: email,
