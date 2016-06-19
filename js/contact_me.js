@@ -9,9 +9,7 @@ $(function() {
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
             var name = $("input#name").val();
-            var email = $("input#email").val();
-            var phone = $("input#phone").val();
-            var message = $("textarea#message").val();
+            var email = $("input#_replyto").val();
             var firstName = name; // For Success/Failure Message
             // Check for white space in name for Success/Fail message
             if (firstName.indexOf(' ') >= 0) {
@@ -19,7 +17,7 @@ $(function() {
             }
             $.ajax({
                 url: "https://formspree.io/udi.secure@email.com",
-                type: "POST",
+                method: "POST",
                 data: {
                     name: name,
                     _replyto: email,
@@ -49,7 +47,8 @@ $(function() {
                     //clear all fields
                     $('#contactForm').trigger("reset");
                 },
-            })
+            });
+            return false;
         },
         filter: function() {
             return $(this).is(":visible");
