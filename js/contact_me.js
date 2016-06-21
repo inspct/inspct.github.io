@@ -10,6 +10,7 @@ $(function() {
             // get values from FORM
             var name = $("input#name").val();
             var email = $("input#_replyto").val();
+            var customer_type = $("input#customer_type").val();
             var firstName = name; // For Success/Failure Message
             // Check for white space in name for Success/Fail message
             if (firstName.indexOf(' ') >= 0) {
@@ -22,6 +23,7 @@ $(function() {
                 data: {
                     name: name,
                     _replyto: email,
+                    customer_type: customer_type,
                 },
                 dataType: "json",
                 cache: false,
