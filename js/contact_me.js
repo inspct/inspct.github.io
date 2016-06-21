@@ -9,7 +9,7 @@ $(function() {
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
             var name = $("input#name").val();
-            var email = $("input#_replyto").val();
+            var email = $("input#email").val();
             var customer_type = $("input#contact_customer").val();
             var firstName = name; // For Success/Failure Message
             // Check for white space in name for Success/Fail message
@@ -22,6 +22,7 @@ $(function() {
                 method: "POST",
                 data: {
                     name: name,
+                    email: email,
                     _replyto: email,
                     customer_type: customer_type,
                 },
