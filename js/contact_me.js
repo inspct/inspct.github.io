@@ -10,7 +10,7 @@ $(function() {
             // get values from FORM
             var name = $("input#name").val();
             var email = $("input#_replyto").val();
-            var customer_type = $("input#customer_type").val();
+            var customer_type = $("input#contact_customer").val();
             var firstName = name; // For Success/Failure Message
             // Check for white space in name for Success/Fail message
             if (firstName.indexOf(' ') >= 0) {
@@ -59,8 +59,8 @@ $(function() {
     });
 
     $(".customer-select").click(function(e) {
-        $("#contact_customer").attr("value", $(this).attr("name"));
-         return true;
+        $("#contact_customer").val($(this).attr("name"));
+        return true;
     });
 
     $("a[data-toggle=\"tab\"]").click(function(e) {
