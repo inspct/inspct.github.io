@@ -17,7 +17,7 @@ $(function() {
             }
             fbq('track', "Lead");
             $.ajax({
-                url: "https://formspree.io/udi.secure@gmail.com",
+                url: "https://formspree.io/inspctd@gmail.com",
                 method: "POST",
                 data: {
                     name: name,
