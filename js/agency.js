@@ -8,6 +8,13 @@
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
+        var href = console.log($anchor.attr('href'));
+        if (href=='#pricing') {
+        	fbq('track', 'InitiateCheckout');
+        } else if (href=='#contact') {
+        	fbq('track', 'Lead');
+        }
+        ga('send', 'pageview', href);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
         }, 1500, 'easeInOutExpo');

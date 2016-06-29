@@ -16,7 +16,8 @@ $(function() {
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
-            fbq('track', "Lead");
+            fbq('track', "CompleteRegistration");
+            ga('send', 'pageview', 'registration');
             $.ajax({
                 url: "https://formspree.io/inspctd@gmail.com",
                 method: "POST",
