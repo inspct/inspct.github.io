@@ -8,7 +8,7 @@
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
-        var href = console.log($anchor.attr('href'));
+        var href = $anchor.attr('href');
         if (href=='#pricing') {
         	fbq('track', 'InitiateCheckout');
         } else if (href=='#contact') {
